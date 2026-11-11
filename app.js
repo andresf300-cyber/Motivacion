@@ -15,3 +15,53 @@ for(const b of document.querySelectorAll('[data-page]'))b.onclick=()=>{const pag
 const reminders=$('#reminders'),reminderTime=$('#reminderTime');reminders.checked=stored('mm_reminders',false);reminderTime.value=stored('mm_reminder_time','08:00');reminders.onchange=()=>{localStorage.setItem('mm_reminders',JSON.stringify(reminders.checked));toast(reminders.checked?'Avisos activados mientras la app esté abierta':'Avisos desactivados')};reminderTime.onchange=()=>{localStorage.setItem('mm_reminder_time',JSON.stringify(reminderTime.value));toast('Hora guardada')};async function notificationTest(){if(!('Notification'in window)){toast('Este navegador no permite notificaciones web aquí');return}try{const status=await Notification.requestPermission();if(status!=='granted'){toast('No se concedió permiso para notificar');return}if('serviceWorker'in navigator){const reg=await navigator.serviceWorker.ready;await reg.showNotification('✦ Mi Motivación',{body:quotes[daily%quotes.length][0],icon:'icon-192.png',tag:'mm-test'})}else new Notification('✦ Mi Motivación',{body:quotes[daily%quotes.length][0]});toast('Notificación de prueba enviada')}catch(e){toast('No se pudo notificar en este navegador')}}$('#permission').onclick=notificationTest;$('#clear').onclick=()=>{if(confirm('¿Borrar tus favoritos y preferencias?')){for(const k of ['mm_favorites','mm_category','mm_reminders','mm_reminder_time'])localStorage.removeItem(k);favorites=[];category='Todas';reminders.checked=false;reminderTime.value='08:00';save();render();toast('Datos borrados')}};
 setInterval(async()=>{const now=new Date(),today=`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`,hm=now.toTimeString().slice(0,5);if(dayNumber()!==daily){daily=dayNumber();$('#widgetText').textContent='“'+quotes[daily%quotes.length][0]+'”'}if(reminders.checked&&hm===reminderTime.value&&lastReminder!==today&&document.visibilityState==='visible'){lastReminder=today;toast('✦ '+quotes[daily%quotes.length][0]);if('Notification'in window&&Notification.permission==='granted'){try{const reg=await navigator.serviceWorker.ready;await reg.showNotification('Tu frase de hoy ✦',{body:quotes[daily%quotes.length][0],icon:'icon-192.png',tag:'mm-daily'})}catch{}}}},15000);
 $('#today').textContent=new Intl.DateTimeFormat('es-CO',{day:'numeric',month:'short'}).format(new Date()).replace('.','');render();if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
+
+
+const italian=[
+['Ogni giorno è una nuova opportunità.','Cada día es una nueva oportunidad.','Ogni = cada; giorno = día; opportunità = oportunidad.'],
+['Non mollare mai.','Nunca te rindas.','Non = no; mollare = rendirse; mai = nunca.'],
+['Un passo alla volta.','Un paso a la vez.','Passo = paso; alla volta = a la vez.'],
+['Credi in te stesso.','Cree en ti mismo.','Credi = cree; te stesso = ti mismo.'],
+['La pazienza è una forza.','La paciencia es una fortaleza.','Pazienza = paciencia; forza = fuerza.'],
+['Oggi scelgo di imparare.','Hoy elijo aprender.','Oggi = hoy; scelgo = elijo; imparare = aprender.'],
+['Posso farcela.','Puedo lograrlo.','Farcela significa conseguir algo.'],
+['La pratica rende migliori.','La práctica nos hace mejores.','Pratica = práctica; migliori = mejores.'],
+['Ho fiducia nel mio percorso.','Confío en mi camino.','Fiducia = confianza; percorso = camino.'],
+['Domani sarà un altro giorno.','Mañana será otro día.','Domani = mañana; sarà = será.'],
+['Imparo qualcosa di nuovo ogni giorno.','Aprendo algo nuevo cada día.','Imparo = aprendo; nuovo = nuevo.'],
+['Le piccole cose contano.','Las pequeñas cosas importan.','Piccole = pequeñas; cose = cosas; contano = importan.']
+];
+const itIndex=()=>Math.floor(Date.now()/86400000)%italian.length;
+function italianRender(){const [it,es,exp]=italian[itIndex()];$('#itPhrase').textContent=it;$('#itSpanish').textContent=es;$('#itExplain').textContent=exp;$('#itReveal').classList.add('hidden')}
+$('#itToggle').onclick=()=>{const hide=$('#itReveal').classList.toggle('hidden');$('#itToggle').textContent=hide?'Ver traducción':'Ocultar traducción'};
+$('#itSpeak').onclick=()=>{if(!('speechSynthesis'in window)){toast('Audio no disponible');return}speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(italian[itIndex()][0]);u.lang='it-IT';u.rate=.8;speechSynthesis.speak(u)};
+let prefs=stored('mm_prefs',null),step=0,draft;
+const topics=['Trading','Disciplina','Superación','Éxito','Bienestar','Familia','Finanzas','Italiano'];
+function wizardOpen(){draft=JSON.parse(JSON.stringify(prefs||{topics:['Trading','Disciplina','Superación','Bienestar','Italiano'],times:['08:00','14:00','20:00'],italian:true}));step=0;$('#onboard').classList.remove('hidden');wizardDraw()}
+function wizardDraw(){
+ $('#wizardStep').textContent='PASO '+(step+1)+' DE 3';
+ $('#wizardTitle').textContent=['¿Qué quieres recibir?','¿A qué horas quieres tus frases?','Tu momento de italiano'][step];
+ $('#wizardDesc').textContent=['Elige tus temas favoritos.','Guarda los horarios que prefieres. Los avisos con la app cerrada todavía requieren un servicio adicional.','Descubre cada día una frase con traducción y pronunciación.'][step];
+ const target=$('#wizardOptions');target.replaceChildren();$('#timeEditor').classList.toggle('hidden',step!==1);
+ if(step===0)topics.forEach(t=>{let l=document.createElement('label');l.className='choice';let c=document.createElement('input');c.type='checkbox';c.checked=draft.topics.includes(t);c.onchange=()=>{draft.topics=c.checked?[...draft.topics,t]:draft.topics.filter(x=>x!==t)};let s=document.createElement('span');s.textContent=t;l.append(c,s);target.append(l)});
+ if(step===1)draft.times.slice().sort().forEach(t=>{let b=document.createElement('button');b.className='secondary';b.style.margin='5px';b.textContent=t+' ×';b.onclick=()=>{draft.times=draft.times.filter(x=>x!==t);wizardDraw()};target.append(b)});
+ if(step===2){let l=document.createElement('label');l.className='choice';let c=document.createElement('input');c.type='checkbox';c.checked=draft.italian;c.onchange=()=>draft.italian=c.checked;let s=document.createElement('span');s.textContent='Quiero una frase diaria en italiano';l.append(c,s);target.append(l)}
+ $('#wizardNext').textContent=step===2?'Guardar preferencias':'Continuar';
+}
+$('#addTime').onclick=()=>{let t=$('#newTime').value;if(t&&!draft.times.includes(t)&&draft.times.length<8){draft.times.push(t);wizardDraw()}else toast('Máximo 8 horarios diferentes')};
+$('#wizardNext').onclick=()=>{if(step===0&&!draft.topics.length)return toast('Elige al menos un tema');if(step===1&&!draft.times.length)return toast('Añade al menos una hora');if(step<2){step++;wizardDraw();return}prefs=draft;localStorage.setItem('mm_prefs',JSON.stringify(prefs));$('#onboard').classList.add('hidden');applyPrefs();toast('Preferencias guardadas')};
+$('#wizardClose').onclick=()=>{if(prefs)$('#onboard').classList.add('hidden');else toast('Completa la encuesta inicial')};
+$('#editPrefs').onclick=wizardOpen;
+function applyPrefs(){if(!prefs)return;$('#prefsSummary').textContent='Temas: '+prefs.topics.join(', ')+' · Horarios: '+prefs.times.slice().sort().join(', ');document.querySelector('.italian-card').classList.toggle('hidden',!prefs.italian)}
+const oldNext=$('#next').onclick;
+$('#next').onclick=()=>{if(!prefs)return oldNext();let pool=quotes.map((_,i)=>i).filter(i=>i!==current&&(category==='Todas'?prefs.topics.includes(quotes[i][1]):quotes[i][1]===category));if(!pool.length)return oldNext();current=pool[Math.floor(Math.random()*pool.length)];render()};
+const oldClear=$('#clear').onclick;
+$('#clear').onclick=()=>{if(confirm('¿Borrar favoritos y preferencias?')){for(let k of ['mm_favorites','mm_category','mm_reminders','mm_reminder_time','mm_prefs'])localStorage.removeItem(k);favorites=[];category='Todas';prefs=null;render();wizardOpen()}};
+italianRender();if(prefs)applyPrefs();else wizardOpen();
+
+// Módulo educativo de trading. El envío real a las 9:30 se gestiona en ChatGPT.
+const tradingThoughts=[["La paciencia protege tu capital; la disciplina protege tu proceso.", "Espera una señal válida antes de entrar. No persigas el precio."], ["No necesitas ganar cada operación; necesitas respetar cada regla.", "Define tu riesgo antes de ejecutar y no lo aumentes por impulso."], ["La constancia es repetir lo correcto incluso cuando el resultado varía.", "Evalúa la calidad de tu ejecución, no solo el P&L."], ["El mercado siempre ofrecerá otra oportunidad; tu capital debe estar para verla.", "Evita sobreoperar después de una pérdida."], ["Una buena operación puede ser no operar.", "Si tu configuración no aparece, esperar también es disciplina."], ["No cambies tu plan para recuperar lo que ya perdiste.", "Respeta tu pérdida máxima diaria."], ["Tu ventaja está en la repetición paciente, no en la prisa.", "Mantén tus criterios de entrada y salida."], ["La calma es parte de tu estrategia.", "Antes de operar, confirma contexto, stop y objetivo."], ["No confundas actividad con progreso.", "Menos operaciones, mejor seleccionadas, pueden cuidar tu consistencia."], ["Una racha no define tu valor como trader.", "Respeta el tamaño de posición incluso después de ganar."], ["La mejor oportunidad no exige que abandones tus reglas.", "Si debes improvisar demasiado, considera no entrar."], ["La disciplina empieza antes de pulsar comprar o vender.", "Verifica riesgo, condiciones y límite de operaciones."], ["Un día plano puede ser un día bien ejecutado.", "No fuerces una entrada para cumplir una meta diaria."], ["La paciencia es una decisión activa.", "Observa el mercado sin sentir obligación de participar."], ["Protege el proceso; los resultados son variables.", "Registra tus operaciones y aprende de tus errores."]];
+let tradingOffset=0;
+function renderTrading(){const n=(Math.floor(Date.now()/86400000)+tradingOffset)%tradingThoughts.length;const [phrase,tip]=tradingThoughts[n];$('#tradingPhrase').textContent='“'+phrase+'”';$('#tradingTip').textContent=tip;}
+$('#tradingNext').onclick=()=>{tradingOffset++;renderTrading()};
+renderTrading();
