@@ -1,21 +1,4 @@
-MI MOTIVACIÓN — versión 1 (PWA)
-
-QUÉ FUNCIONA
-- Más de 55 frases originales en español; categorías, cambios de frase y frase del día.
-- Favoritos persistentes en el dispositivo; compartir con otras apps.
-- Diseño adaptado al iPhone, instalable en la pantalla de inicio mediante Safari.
-- Uso sin conexión tras la primera visita desde un servidor HTTPS.
-- Recordatorios de hora SOLO mientras la app esté abierta y activa; prueba de notificación donde el navegador lo permita.
-- Vista previa visual de un widget dentro de Ajustes. NO es un widget nativo.
-
-CÓMO PUBLICAR SIN PAGAR (GitHub Pages)
-1. Crea un repositorio público llamado mi-motivacion en github.com.
-2. Sube el contenido de esta carpeta (index.html, app.js, sw.js, manifest.webmanifest y tres PNG) a la raíz del repositorio.
-3. En Settings > Pages > Build and deployment selecciona Deploy from a branch, main y / (root), y guarda.
-4. GitHub mostrará una dirección como https://TU_USUARIO.github.io/mi-motivacion/.
-5. Abre esa URL con Safari en tu iPhone, pulsa Compartir > Añadir a pantalla de inicio.
-
-LIMITACIONES DE IOS
-Una PWA no puede crear widgets reales en pantalla de bloqueo/inicio; para eso se necesita una app iOS con WidgetKit. Las notificaciones programadas con la app cerrada requieren un servidor push y suscripción web push, o crear una app iOS nativa con UserNotifications. La versión 1 NO envía esos recordatorios cuando esté cerrada.
-
-Privacidad: todas tus preferencias y favoritos se guardan únicamente en el almacenamiento local de tu navegador; sin cuentas, anuncios ni analítica.
+Mi Motivación 5.0 — icono libro abierto (opción 5).
+Sube TODOS los archivos de esta carpeta a la raíz de tu repositorio GitHub Pages y reemplaza los anteriores.
+Si el icono anterior sigue apareciendo en iPhone, elimina el acceso directo de la pantalla de inicio y vuelve a añadirlo desde Safari.
+Aviso: las notificaciones con la app cerrada requieren un servicio push que todavía no está configurado.
