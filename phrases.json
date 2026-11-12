@@ -1,0 +1,526 @@
+{
+  "es": [
+    {
+      "text": "Hoy basta con avanzar un poco.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Tu esfuerzo también merece reconocimiento.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Una decisión pequeña puede cambiar tu rumbo.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Sigue construyendo, incluso en silencio.",
+      "category": "Motivación"
+    },
+    {
+      "text": "No te rindas en un día difícil.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Lo que haces hoy tiene valor.",
+      "category": "Motivación"
+    },
+    {
+      "text": "El primer paso también cuenta.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Hay nuevas oportunidades por descubrir.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Tu camino no tiene que parecerse al de otros.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Haz de hoy un comienzo sencillo.",
+      "category": "Motivación"
+    },
+    {
+      "text": "La esperanza también se practica.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Lo importante es seguir aprendiendo.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Tu ritmo es válido si sigues avanzando.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Una pausa no es una derrota.",
+      "category": "Motivación"
+    },
+    {
+      "text": "El cambio empieza con una elección.",
+      "category": "Motivación"
+    },
+    {
+      "text": "Cumple contigo antes de buscar aprobación.",
+      "category": "Disciplina"
+    },
+    {
+      "text": "La constancia se construye un día a la vez.",
+      "category": "Disciplina"
+    },
+    {
+      "text": "Elige el hábito que te acerca a tu meta.",
+      "category": "Disciplina"
+    },
+    {
+      "text": "Haz lo necesario, no solo lo cómodo.",
+      "category": "Disciplina"
+    },
+    {
+      "text": "Tu palabra contigo también importa.",
+      "category": "Disciplina"
+    },
+    {
+      "text": "La disciplina libera tiempo para lo esencial.",
+      "category": "Disciplina"
+    },
+    {
+      "text": "No dependas de las ganas para comenzar.",
+      "category": "Disciplina"
+    },
+    {
+      "text": "Repite lo útil, aunque sea sencillo.",
+      "category": "Disciplina"
+    },
+    {
+      "text": "Los hábitos fuertes nacen de pasos pequeños.",
+      "category": "Disciplina"
+    },
+    {
+      "text": "La paciencia también se entrena.",
+      "category": "Disciplina"
+    },
+    {
+      "text": "La mejor entrada también puede ser esperar.",
+      "category": "Trading"
+    },
+    {
+      "text": "Tu plan vale más que la emoción del momento.",
+      "category": "Trading"
+    },
+    {
+      "text": "El riesgo se respeta antes de operar.",
+      "category": "Trading"
+    },
+    {
+      "text": "No persigas al mercado por ansiedad.",
+      "category": "Trading"
+    },
+    {
+      "text": "Una pérdida limitada es una regla cumplida.",
+      "category": "Trading"
+    },
+    {
+      "text": "Menos impulsos, mejores decisiones.",
+      "category": "Trading"
+    },
+    {
+      "text": "Tu capital merece paciencia.",
+      "category": "Trading"
+    },
+    {
+      "text": "Detenerte a tiempo también es disciplina.",
+      "category": "Trading"
+    },
+    {
+      "text": "No necesitas recuperar todo hoy.",
+      "category": "Trading"
+    },
+    {
+      "text": "La consistencia exige respetar límites.",
+      "category": "Trading"
+    },
+    {
+      "text": "Tu estrategia no cambia por una vela.",
+      "category": "Trading"
+    },
+    {
+      "text": "No confundas operar mucho con operar bien.",
+      "category": "Trading"
+    },
+    {
+      "text": "Espera tus condiciones, no tus emociones.",
+      "category": "Trading"
+    },
+    {
+      "text": "Cuidar el riesgo también es progresar.",
+      "category": "Trading"
+    },
+    {
+      "text": "La calma es parte de tu ventaja.",
+      "category": "Trading"
+    },
+    {
+      "text": "Estar presente es una forma de amor.",
+      "category": "Familia"
+    },
+    {
+      "text": "Un abrazo también mejora el día.",
+      "category": "Familia"
+    },
+    {
+      "text": "Los momentos simples dejan grandes recuerdos.",
+      "category": "Familia"
+    },
+    {
+      "text": "Escuchar con atención es un regalo.",
+      "category": "Familia"
+    },
+    {
+      "text": "La gratitud empieza en lo cotidiano.",
+      "category": "Familia"
+    },
+    {
+      "text": "Agradece a quienes caminan contigo.",
+      "category": "Familia"
+    },
+    {
+      "text": "Dedica tiempo a lo que no se compra.",
+      "category": "Familia"
+    },
+    {
+      "text": "Una sonrisa puede acompañar por años.",
+      "category": "Familia"
+    },
+    {
+      "text": "Haz espacio para compartir sin prisa.",
+      "category": "Familia"
+    },
+    {
+      "text": "La familia también merece tus mejores horas.",
+      "category": "Familia"
+    },
+    {
+      "text": "Las metas se acercan con acciones pequeñas.",
+      "category": "Metas"
+    },
+    {
+      "text": "El progreso no siempre se ve de inmediato.",
+      "category": "Metas"
+    },
+    {
+      "text": "Una buena rutina sostiene un gran sueño.",
+      "category": "Metas"
+    },
+    {
+      "text": "Avanza con dirección, no con prisa.",
+      "category": "Metas"
+    },
+    {
+      "text": "Hoy puedes mejorar un detalle.",
+      "category": "Metas"
+    },
+    {
+      "text": "Tus decisiones diarias dibujan tu futuro.",
+      "category": "Metas"
+    },
+    {
+      "text": "Cada intento enseña algo nuevo.",
+      "category": "Metas"
+    },
+    {
+      "text": "La meta importa; el proceso te transforma.",
+      "category": "Metas"
+    },
+    {
+      "text": "Lo que repites se convierte en resultado.",
+      "category": "Metas"
+    },
+    {
+      "text": "No abandones por un día imperfecto.",
+      "category": "Metas"
+    },
+    {
+      "text": "Algo bueno puede empezar hoy.",
+      "category": "Optimismo"
+    },
+    {
+      "text": "La alegría cabe en momentos pequeños.",
+      "category": "Optimismo"
+    },
+    {
+      "text": "Hay belleza en lo cotidiano.",
+      "category": "Optimismo"
+    },
+    {
+      "text": "Busca una razón para agradecer.",
+      "category": "Optimismo"
+    },
+    {
+      "text": "La esperanza no necesita hacer ruido.",
+      "category": "Optimismo"
+    },
+    {
+      "text": "Un día nuevo trae otra perspectiva.",
+      "category": "Optimismo"
+    },
+    {
+      "text": "Tu actitud puede abrir una puerta.",
+      "category": "Optimismo"
+    },
+    {
+      "text": "Elige mirar también lo que sí funciona.",
+      "category": "Optimismo"
+    },
+    {
+      "text": "La gratitud cambia la forma de mirar.",
+      "category": "Optimismo"
+    },
+    {
+      "text": "Cada amanecer ofrece otra oportunidad.",
+      "category": "Optimismo"
+    },
+    {
+      "text": "Una tarea terminada vale más que diez pendientes.",
+      "category": "Productividad"
+    },
+    {
+      "text": "Empieza por lo que más importa.",
+      "category": "Productividad"
+    },
+    {
+      "text": "Protege tu atención como proteges tu tiempo.",
+      "category": "Productividad"
+    },
+    {
+      "text": "Menos distracciones, más intención.",
+      "category": "Productividad"
+    },
+    {
+      "text": "Una pausa breve puede mejorar tu enfoque.",
+      "category": "Productividad"
+    },
+    {
+      "text": "Ordena tus prioridades antes de comenzar.",
+      "category": "Productividad"
+    },
+    {
+      "text": "Lo simple, bien hecho, también suma.",
+      "category": "Productividad"
+    },
+    {
+      "text": "No llenes tu día; dale dirección.",
+      "category": "Productividad"
+    },
+    {
+      "text": "Concentrarte también es un hábito.",
+      "category": "Productividad"
+    },
+    {
+      "text": "Termina una cosa antes de abrir otra.",
+      "category": "Productividad"
+    },
+    {
+      "text": "No todo silencio significa ausencia.",
+      "category": "Reflexiones"
+    },
+    {
+      "text": "La calma también puede ser una respuesta.",
+      "category": "Reflexiones"
+    },
+    {
+      "text": "Cambiar de opinión es parte de aprender.",
+      "category": "Reflexiones"
+    },
+    {
+      "text": "La vida ocurre mientras haces planes.",
+      "category": "Reflexiones"
+    },
+    {
+      "text": "No todo lo valioso se puede medir.",
+      "category": "Reflexiones"
+    },
+    {
+      "text": "Ser amable también requiere fortaleza.",
+      "category": "Reflexiones"
+    },
+    {
+      "text": "A veces soltar es una forma de avanzar.",
+      "category": "Reflexiones"
+    },
+    {
+      "text": "Escuchar puede enseñar más que responder.",
+      "category": "Reflexiones"
+    },
+    {
+      "text": "Tu paz merece un lugar en tu agenda.",
+      "category": "Reflexiones"
+    },
+    {
+      "text": "El tiempo compartido no regresa.",
+      "category": "Reflexiones"
+    }
+  ],
+  "it": [
+    {
+      "text": "La calma aiuta a scegliere bene.",
+      "translation": "La calma ayuda a elegir bien."
+    },
+    {
+      "text": "Ogni passo ha valore.",
+      "translation": "Cada paso tiene valor."
+    },
+    {
+      "text": "Oggi faccio del mio meglio.",
+      "translation": "Hoy hago lo mejor que puedo."
+    },
+    {
+      "text": "Imparare richiede pazienza.",
+      "translation": "Aprender requiere paciencia."
+    },
+    {
+      "text": "La costanza porta lontano.",
+      "translation": "La constancia te lleva lejos."
+    },
+    {
+      "text": "Scegli ciò che conta.",
+      "translation": "Elige lo que importa."
+    },
+    {
+      "text": "Non avere fretta.",
+      "translation": "No tengas prisa."
+    },
+    {
+      "text": "La famiglia è un dono.",
+      "translation": "La familia es un regalo."
+    },
+    {
+      "text": "Sono grato per questo giorno.",
+      "translation": "Estoy agradecido por este día."
+    },
+    {
+      "text": "Un sorriso cambia la giornata.",
+      "translation": "Una sonrisa cambia el día."
+    },
+    {
+      "text": "La vita è fatta di piccoli momenti.",
+      "translation": "La vida está hecha de pequeños momentos."
+    },
+    {
+      "text": "La disciplina crea libertà.",
+      "translation": "La disciplina crea libertad."
+    },
+    {
+      "text": "Posso imparare dai miei errori.",
+      "translation": "Puedo aprender de mis errores."
+    },
+    {
+      "text": "La pazienza dà forza.",
+      "translation": "La paciencia da fuerza."
+    },
+    {
+      "text": "Ogni mattina è un nuovo inizio.",
+      "translation": "Cada mañana es un nuevo comienzo."
+    },
+    {
+      "text": "Credo nei piccoli progressi.",
+      "translation": "Creo en los pequeños avances."
+    },
+    {
+      "text": "La serenità è importante.",
+      "translation": "La serenidad es importante."
+    },
+    {
+      "text": "Oggi scelgo la gratitudine.",
+      "translation": "Hoy elijo la gratitud."
+    },
+    {
+      "text": "Non devo fare tutto oggi.",
+      "translation": "No tengo que hacerlo todo hoy."
+    },
+    {
+      "text": "Un obiettivo alla volta.",
+      "translation": "Una meta a la vez."
+    },
+    {
+      "text": "Il tempo è prezioso.",
+      "translation": "El tiempo es valioso."
+    },
+    {
+      "text": "Fai una pausa e respira.",
+      "translation": "Haz una pausa y respira."
+    },
+    {
+      "text": "La fiducia cresce con la pratica.",
+      "translation": "La confianza crece con la práctica."
+    },
+    {
+      "text": "Ogni giorno posso migliorare.",
+      "translation": "Cada día puedo mejorar."
+    },
+    {
+      "text": "Il coraggio comincia da un passo.",
+      "translation": "El valor comienza con un paso."
+    },
+    {
+      "text": "Resta fedele ai tuoi valori.",
+      "translation": "Mantente fiel a tus valores."
+    },
+    {
+      "text": "La gentilezza conta sempre.",
+      "translation": "La amabilidad siempre importa."
+    },
+    {
+      "text": "Oggi è un buon giorno per imparare.",
+      "translation": "Hoy es un buen día para aprender."
+    },
+    {
+      "text": "Ascolta con attenzione.",
+      "translation": "Escucha con atención."
+    },
+    {
+      "text": "Non perdere la speranza.",
+      "translation": "No pierdas la esperanza."
+    },
+    {
+      "text": "La strada si costruisce camminando.",
+      "translation": "El camino se construye andando."
+    },
+    {
+      "text": "Sii presente nel momento.",
+      "translation": "Estate presente en el momento."
+    },
+    {
+      "text": "Le buone abitudini fanno la differenza.",
+      "translation": "Los buenos hábitos marcan la diferencia."
+    },
+    {
+      "text": "Il riposo fa parte del percorso.",
+      "translation": "El descanso es parte del camino."
+    },
+    {
+      "text": "La felicità vive nelle piccole cose.",
+      "translation": "La felicidad vive en las pequeñas cosas."
+    },
+    {
+      "text": "Prenditi cura di te.",
+      "translation": "Cuida de ti."
+    },
+    {
+      "text": "La pazienza migliora le decisioni.",
+      "translation": "La paciencia mejora las decisiones."
+    },
+    {
+      "text": "Oggi posso ricominciare.",
+      "translation": "Hoy puedo volver a empezar."
+    },
+    {
+      "text": "Lentamente si arriva lontano.",
+      "translation": "Poco a poco se llega lejos."
+    },
+    {
+      "text": "La gratitudine rende ricchi.",
+      "translation": "La gratitud nos enriquece."
+    }
+  ]
+}
