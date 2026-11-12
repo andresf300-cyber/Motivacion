@@ -1,4 +1,7 @@
-Mi Motivación 5.0 — icono libro abierto (opción 5).
-Sube TODOS los archivos de esta carpeta a la raíz de tu repositorio GitHub Pages y reemplaza los anteriores.
-Si el icono anterior sigue apareciendo en iPhone, elimina el acceso directo de la pantalla de inicio y vuelve a añadirlo desde Safari.
-Aviso: las notificaciones con la app cerrada requieren un servicio push que todavía no está configurado.
+Mi Motivación 5.1 — Frases renovadas
+
+Sube TODOS los archivos extraídos a la raíz del repositorio GitHub Pages y confirma Commit changes. Espera la publicación y vuelve a abrir la aplicación.
+
+Novedades: 75 frases adicionales, selección diaria que recorre la biblioteca sin repetir hasta completar un ciclo, siguiente frase con historial local por categoría, y actualización al cambiar el día. Conserva favoritos y preferencias anteriores.
+
+IMPORTANTE: las notificaciones con la aplicación cerrada NO están implementadas; los horarios guardados solo funcionan mientras la web está activa. Los widgets de iOS tampoco son nativos todavía.
